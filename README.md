@@ -8,9 +8,9 @@ Usage:
         [/SuppressOutput:<SuppressOutput>] [/SuppressStats:<SuppressStats>] [/StatsAsJson:<StatsAsJson>]
 
 Details:
-        HarFile The path to a har file. e.g. 'c:\scrap\fiddlerlog.har'
-        SendCookies     Should the replayer send the embedded cookies? e.g. 'false'
+        HarFile                 The path to a har file. e.g. 'c:\scrap\fiddlerlog.har'
+        SendCookies             Should the replayer send the embedded cookies? e.g. 'false'
         IncludedHttpMethods     Which method(s) should the replayer send from the session log? e.g. 'HEAD|PATCH|PUT'
-        SuppressOutput  Suppress output? e.g. 'true'
-        SuppressStats   Suppress statistics summary? e.g. 'true'
-        StatsAsJson     Format statistics as JSON? e.g. 'true'
+        SuppressOutput          Suppress output? e.g. 'true'
+        SuppressStats           Suppress statistics summary? e.g. 'true'
+        StatsAsJson             Format statistics as JSON? e.g. 'true'
