@@ -1,7 +1,7 @@
 DotNetHARReplayer
 =================
 
-C# application which replays HttpArchive v1.2 session log. This application requires .NET 4.0. From the usage output:
+C# application which replays HttpArchive v1.2 session logs. This application requires .NET 4.0. From the usage output:
 
 <pre>
 Usage:
