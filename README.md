@@ -1,3 +1,4 @@
+<pre>
 DotNetHARReplayer
 =================
 
@@ -14,3 +15,4 @@ Details:
         SuppressOutput          Suppress output? e.g. 'true'
         SuppressStats           Suppress statistics summary? e.g. 'true'
         StatsAsJson             Format statistics as JSON? e.g. 'true'
+</pre>
