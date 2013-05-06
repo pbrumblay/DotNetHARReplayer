@@ -1,9 +1,9 @@
-<pre>
 DotNetHARReplayer
 =================
 
 C# application which replays HttpArchive v1.2 session log. This application requires .NET 4.0. From the usage output:
 
+<pre>
 Usage:
         HARReplayer.exe <HarFile> [/SendCookies:<SendCookies>] [/IncludedHttpMethods:<IncludedHttpMethods>] 
         [/SuppressOutput:<SuppressOutput>] [/SuppressStats:<SuppressStats>] [/StatsAsJson:<StatsAsJson>]
