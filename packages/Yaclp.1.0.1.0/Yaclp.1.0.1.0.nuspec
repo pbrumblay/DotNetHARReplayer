@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Yaclp</id>
+    <version>1.0.1.0</version>
+    <title>YACLP</title>
+    <authors>Andrew Harcourt</authors>
+    <owners>Andrew Harcourt</owners>
+    <licenseUrl>http://mit-license.org/</licenseUrl>
+    <projectUrl>https://github.com/uglybugger/Yaclp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Yet Another Command-Line Parser</description>
+    <releaseNotes />
+    <copyright>Copyright 2012 Andrew Harcourt. Released under MIT Licence.</copyright>
+    <language />
+    <tags>command line argument parameter parser arguments parameters</tags>
+  </metadata>
+</package>
