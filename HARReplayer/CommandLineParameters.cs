@@ -33,11 +33,11 @@ namespace HARReplayer
         [ParameterIsOptional]
         public bool SuppressStats { get; set; }
 
-        [ParameterDescription("Format statistics as JSON?")]
-        [ParameterExample("true")]
-        [ParameterDefault("false")]
+        [ParameterDescription("Statistics Format?")]
+        [ParameterExample("human|json|csv")]
+        [ParameterDefault("human")]
         [ParameterIsOptional]
-        public bool StatsAsJson { get; set; }
+        public string StatsFormat { get; set; }
 
     }
 }

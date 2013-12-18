@@ -13,7 +13,6 @@ namespace HARReplayer
 
         bool SuppressStats { get; set; }
 
-        bool StatsAsJson { get; set; }
-
+        string StatsFormat { get; set; }
     }
 }

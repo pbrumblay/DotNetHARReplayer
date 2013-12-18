@@ -12,6 +12,8 @@ namespace HARReplayer
             Errors = new List<string>();
         }
 
+        public DateTime Start { get; set; }
+        public DateTime Stop { get; set; }
         public int RequestsExecuted { get; set; }
         public long ElapsedMilliseconds { get; set; }
         public decimal RequestsPerSecond { get; set; }

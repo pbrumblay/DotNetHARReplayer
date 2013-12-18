@@ -55,6 +55,7 @@ namespace HARReplayer
 
             using (HttpClient client = new HttpClient(handler))
             {
+                stats.Start = DateTime.Now;
                 sw.Start();
                 foreach (var entry in session.entries)
                 {
@@ -123,6 +124,7 @@ namespace HARReplayer
 
                 }
                 sw.Stop();
+                stats.Stop = DateTime.Now;
                 stats.ElapsedMilliseconds = sw.ElapsedMilliseconds;
                 
             }
@@ -130,9 +132,13 @@ namespace HARReplayer
             if (!_config.SuppressStats)
             {
                 Console.SetOut(_output);
-                if (_config.StatsAsJson)
+                if (_config.StatsFormat.ToUpper() == "JSON")
                 {
                     Console.WriteLine(JsonConvert.SerializeObject(stats));
+                }
+                else if (_config.StatsFormat.ToUpper() == "CSV")
+                {
+                    Console.WriteLine("{0},{1},{2},{3},{4},{5}", stats.Start, stats.Stop, stats.RequestsExecuted, stats.ElapsedMilliseconds, stats.Errors.Count, stats.RequestsPerSecond);
                 }
                 else
                 {
@@ -141,6 +147,8 @@ namespace HARReplayer
                     Console.WriteLine("ElapsedMilliseconds: {0}", stats.ElapsedMilliseconds);
                     Console.WriteLine("NumberOfErrors: {0}", stats.Errors.Count);
                     Console.WriteLine("RequestsPerSecond: {0}", stats.RequestsPerSecond);
+                    Console.WriteLine("Start: {0}", stats.Start);
+                    Console.WriteLine("Stop: {0}", stats.Stop);
 
                     if (stats.Errors.Count > 0)
                     {
