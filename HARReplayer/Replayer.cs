@@ -74,7 +74,7 @@ namespace HARReplayer
                     {
                         if (!h.name.StartsWith("Content"))
                         {
-                            msg.Headers.AddWithoutValidation(h.name, h.value);
+                            msg.Headers.Add(h.name, h.value);
                         }
                     }
 
@@ -105,11 +105,8 @@ namespace HARReplayer
                     }
                     catch (Exception e)
                     {
-                        //There is a known bug with responses which exceed 64k with this older version of HttpClient.
-                        //I need to maintain 4.0 compatibility so I'm staying with the older version for now.
-                        //see: http://social.msdn.microsoft.com/Forums/en-US/winappswithcsharp/thread/75a8c005-3dd4-449e-8c26-214a3c2ec860/
                         Console.WriteLine("Internal error: {0}", e.Message);
-                        Console.WriteLine("StackTrace: {0}", e.StackTrace);
+                        Console.WriteLine("StackTrace: {0}", e.ToString());
                         stats.Errors.Add(String.Format("INTERNAL ERROR: {0} {1}", entry.request.method, entry.request.url));
                         continue;
                     }
